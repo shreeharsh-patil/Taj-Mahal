@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/* Canvas must always fill the screen */
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0d0f14;
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+
+.font-serif {
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+canvas {
+  outline: none;
+}
+
+/* Transparent glass controls */
+.glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.07));
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(14px) saturate(1.3);
+  -webkit-backdrop-filter: blur(14px) saturate(1.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  color: #fff;
+  cursor: pointer;
+}
+div.glass {
+  cursor: default;
+}
+.glass:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.1));
+}
+
+.gbtn {
+  appearance: none;
+  border: 1px solid transparent;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  padding: 7px 11px;
+  border-radius: 999px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+@media (min-width: 640px) {
+  .gbtn {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+}
+.gbtn:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+.gbtn:active {
+  transform: scale(0.97);
+}
+.gbtn-active {
+  background: rgba(255, 255, 255, 0.28);
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #fff;
+}
+.gbtn-accent {
+  background: rgba(233, 196, 120, 0.28);
+  border-color: rgba(243, 220, 154, 0.55);
+  color: #fff6dc;
+}
+.gbtn-accent:hover {
+  background: rgba(233, 196, 120, 0.4);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Premium loading backdrop */
+.loader-bg {
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(233, 196, 120, 0.16), transparent 55%),
+    radial-gradient(ellipse at 50% 110%, rgba(190, 110, 80, 0.2), transparent 55%),
+    linear-gradient(180deg, #11141c 0%, #1a1620 55%, #26181a 100%);
+}
