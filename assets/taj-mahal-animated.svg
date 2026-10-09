@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+<title id="title">Taj Mahal — a cinematic 3D experience</title>
+<desc id="desc">An illustrated Taj Mahal at twilight, with a glowing sky, floating clouds, twinkling stars and shimmering reflection pool.</desc>
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#101b34"/><stop offset=".54" stop-color="#493d53"/><stop offset=".87" stop-color="#bf7e6c"/><stop offset="1" stop-color="#e5b68b"/></linearGradient>
+  <linearGradient id="marble" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="#fff9e8"/><stop offset=".52" stop-color="#e9e1d8"/><stop offset="1" stop-color="#b9b7bb"/></linearGradient>
+  <linearGradient id="dome" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffdf0"/><stop offset=".58" stop-color="#e5ddd6"/><stop offset="1" stop-color="#b8adba"/></linearGradient>
+  <linearGradient id="pool" x1=".5" y1="0" x2=".5" y2="1"><stop stop-color="#513f55"/><stop offset="1" stop-color="#111e35"/></linearGradient>
+  <radialGradient id="sunGlow"><stop stop-color="#ffe2aa" stop-opacity=".83"/><stop offset=".38" stop-color="#ffd09d" stop-opacity=".32"/><stop offset="1" stop-color="#ffc28c" stop-opacity="0"/></radialGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="9"/></filter>
+  <filter id="soft"><feGaussianBlur stdDeviation="2.2"/></filter>
+  <clipPath id="waterClip"><path d="M532 389 H668 L794 500 H406 Z"/></clipPath>
+  <g id="arch">
+    <path d="M-32 0 V-38 Q-32-55 -21-66 L0-90 L21-66 Q32-55 32-38 V0" fill="#998f95" stroke="#fff6e7" stroke-width="3"/>
+    <path d="M-23 0 V-37 Q-23-50 -15-59 L0-76 L15-59 Q23-50 23-37 V0" fill="#46404e"/>
+    <path d="M-12 0 V-33 Q-12-44 -7-51 L0-60 L7-51 Q12-44 12-33 V0" fill="#252b40"/>
+  </g>
+  <g id="minaret">
+    <path d="M-15 0 L-10-132 H10 L15 0Z" fill="url(#marble)" stroke="#fef8e6" stroke-width="1.2"/>
+    <path d="M-19-114 H19 L15-107 H-15Z M-20-63 H20 L17-56 H-17Z M-21-12 H21 L18-5 H-18Z" fill="#efe6d8" stroke="#ada5ac" stroke-width="1"/>
+    <path d="M-14-133 V-144 Q-14-156 0-164 Q14-156 14-144 V-133Z" fill="url(#dome)"/>
+    <path d="M0-167 V-179" stroke="#e9ce91" stroke-width="2"/>
+    <circle cx="0" cy="-180" r="3" fill="#fbe5ac"/>
+    <path d="M-6-113 V-127 M6-113 V-127 M-6-63 V-77 M6-63 V-77" stroke="#99909b" stroke-width="2"/>
+  </g>
+  <g id="cypress"><path d="M0 0 L-13-9 L-10-17 L-16-26 L-9-30 L-12-42 L-5-51 L0-68 L5-51 L12-42 L9-30 L16-26 L10-17 L13-9Z" fill="#263848"/><path d="M0 0V-60" stroke="#172e39" stroke-width="2"/></g>
+</defs>
+<style>
+.star{animation:twinkle 3.2s ease-in-out infinite alternate;transform-origin:center}
+.star:nth-child(2n){animation-delay:-1.5s}
+.star:nth-child(3n){animation-delay:-2.3s}
+@keyframes twinkle{0%{opacity:.15}100%{opacity:.86}}
+.sun{animation:pulse 7s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.58}50%{opacity:.92}}
+.cloud-left{animation:floatLeft 24s ease-in-out infinite alternate}
+.cloud-right{animation:floatRight 28s ease-in-out infinite alternate}
+@keyframes floatLeft{from{transform:translateX(-16px)}to{transform:translateX(24px)}}
+@keyframes floatRight{from{transform:translateX(18px)}to{transform:translateX(-20px)}}
+.reflection{animation:shimmer 4.5s ease-in-out infinite alternate}
+.reflection:nth-child(2n){animation-delay:-2s}
+@keyframes shimmer{0%{opacity:.18;transform:translateX(-8px)}100%{opacity:.75;transform:translateX(11px)}}
+.title-glow{animation:appear 4.5s ease-in-out infinite alternate}
+@keyframes appear{from{opacity:.83}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect width="1200" height="500" fill="url(#sky)"/>
+<circle class="sun" cx="605" cy="239" r="320" fill="url(#sunGlow)"/>
+<circle cx="605" cy="238" r="92" fill="#f8d6ae" opacity=".18" filter="url(#blur)"/>
+<g fill="#faf1df">
+ <circle class="star" cx="72" cy="43" r="1.6"/><circle class="star" cx="227" cy="61" r="1.3"/><circle class="star" cx="305" cy="28" r="1.2"/><circle class="star" cx="445" cy="81" r="1.4"/><circle class="star" cx="742" cy="51" r="1.5"/><circle class="star" cx="808" cy="113" r="1.1"/><circle class="star" cx="936" cy="58" r="1.5"/><circle class="star" cx="1082" cy="36" r="1.4"/><circle class="star" cx="1147" cy="129" r="1.1"/><circle class="star" cx="170" cy="167" r="1.1"/>
+</g>
+<g opacity=".21" fill="#f0d1bd" filter="url(#soft)">
+  <path class="cloud-left" d="M60 211 C131 186 190 199 255 211 S361 215 410 202 L411 224 H60Z"/>
+  <path class="cloud-right" d="M794 174 C860 148 923 159 979 169 S1096 165 1165 151 L1171 182 H794Z"/>
+</g>
+<path d="M0 339 Q170 328 297 337 T627 332 T916 340 T1200 329 V500H0Z" fill="#594953" opacity=".6"/>
+<path d="M0 370 H1200 V500 H0Z" fill="#18283b"/>
+<g opacity=".42" fill="#152c38">
+ <path d="M0 378 L19 327 L36 378 M20 378 L53 302 L78 378 M104 378 L133 333 L163 378 M1045 378 L1070 334 L1098 378 M1120 378 L1148 295 L1172 378 M1170 378 L1195 331 L1200 378Z"/>
+</g>
+<!-- Four flanking minarets -->
+<use href="#minaret" transform="translate(297 353)"/>
+<use href="#minaret" transform="translate(369 353) scale(.84 1)"/>
+<use href="#minaret" transform="translate(831 353) scale(.84 1)"/>
+<use href="#minaret" transform="translate(903 353)"/>
+<!-- Main ivory structure -->
+<path d="M417 225 H783 V354 H417Z" fill="url(#marble)" stroke="#fff8e8" stroke-width="1.6"/>
+<path d="M433 238 H767 V351 H433Z" fill="none" stroke="#c0aeb1" stroke-width="3" opacity=".67"/>
+<path d="M405 221 H795 L789 232 H411Z" fill="#eee3db"/>
+<path d="M492 222 V208 H708 V222" fill="#c7bfc0"/>
+<!-- Central dome -->
+<path d="M506 209 C501 186 514 155 546 136 C569 121 582 111 600 86 C618 111 631 121 654 136 C686 155 699 186 694 209Z" fill="url(#dome)" stroke="#fff6e8" stroke-width="2"/>
+<path d="M514 199 C518 165 539 147 562 131" fill="none" stroke="#fffaf1" stroke-opacity=".45" stroke-width="6"/>
+<path d="M501 208 H699 V224 H501Z" fill="#dfd2c9" stroke="#fff3dc" stroke-width="2"/>
+<path d="M600 89 V62" stroke="#f6d994" stroke-width="4"/>
+<path d="M591 70 Q600 54 609 70 Q600 66 591 70Z" fill="#f8dc95"/>
+<circle cx="600" cy="56" r="4" fill="#f8dc95"/>
+<!-- smaller domes -->
+<g fill="url(#dome)" stroke="#fcf0e0" stroke-width="1.5">
+ <path d="M432 219 V198 Q432 182 451 171 Q470 182 470 198 V219Z"/><path d="M730 219 V198 Q730 182 749 171 Q768 182 768 198 V219Z"/>
+</g>
+<g stroke="#e9d49e" stroke-width="2"><path d="M451 173 V160 M749 173 V160"/></g>
+<!-- pointed main portal and ornamental arches -->
+<path d="M543 352 V279 Q543 252 561 236 L600 202 L639 236 Q657 252 657 279 V352Z" fill="#dad0cb" stroke="#fff9eb" stroke-width="4"/>
+<path d="M556 352 V282 Q556 260 572 246 L600 220 L628 246 Q644 260 644 282 V352Z" fill="#a6a0a8" stroke="#c2aeb0" stroke-width="3"/>
+<path d="M565 352 V287 Q565 270 578 257 L600 239 L622 257 Q635 270 635 287 V352Z" fill="#38394a"/>
+<path d="M576 352 V294 Q576 281 584 271 L600 258 L616 271 Q624 281 624 294 V352Z" fill="#1b2b3e" opacity=".85"/>
+<g opacity=".95"><use href="#arch" transform="translate(477 349) scale(.74 1.05)"/><use href="#arch" transform="translate(723 349) scale(.74 1.05)"/></g>
+<g fill="none" stroke="#b89d8b" stroke-width="1.3" opacity=".8"><path d="M422 245 H534 M664 245 H777 M422 328 H536 M663 328 H777"/><path d="M442 258 V342 M512 258 V342 M688 258 V342 M758 258 V342"/></g>
+<!-- platform -->
+<path d="M237 356 H963 L992 381 H208Z" fill="#d8c8be" stroke="#fef4e3" stroke-width="2"/>
+<path d="M207 380 H993 V391 H207Z" fill="#ad938f"/>
+<path d="M395 366 H805 L812 374 H388Z" fill="#f0e5d8" opacity=".55"/>
+<!-- greenery and pool -->
+<g opacity=".85"><use href="#cypress" transform="translate(163 403)"/><use href="#cypress" transform="translate(215 415) scale(.82)"/><use href="#cypress" transform="translate(986 403)"/><use href="#cypress" transform="translate(1037 415) scale(.82)"/></g>
+<path d="M523 389 H677 L796 500 H404Z" fill="url(#pool)" stroke="#e9bca1" stroke-opacity=".44" stroke-width="3"/>
+<g clip-path="url(#waterClip)" fill="none" stroke="#f7cfab" stroke-linecap="round">
+  <path class="reflection" d="M533 398 H664" stroke-width="2" opacity=".5"/>
+  <path class="reflection" d="M517 414 H679" stroke-width="1.5"/>
+  <path class="reflection" d="M545 432 H640 M664 432 H693 M490 450 H558 M575 450 H714" stroke-width="2"/>
+  <path class="reflection" d="M456 473 H533 M561 473 H626 M656 473 H746" stroke-width="2.5"/>
+  <path class="reflection" d="M426 489 H502 M520 489 H594 M615 489 H779" stroke-width="2"/>
+  <path d="M545 396 L580 460 M657 396 L623 460" stroke="#e4ccb6" opacity=".08" stroke-width="20" filter="url(#blur)"/>
+</g>
+<path d="M0 429 Q173 407 381 439 L401 500 H0Z M1200 429 Q1027 407 819 439 L799 500 H1200Z" fill="#172b35" opacity=".75"/>
+<!-- editorial title -->
+<g class="title-glow" fill="#fff2dd">
+ <text x="56" y="92" font-family="Georgia,Times New Roman,serif" font-size="54" font-weight="normal" letter-spacing="6">TAJ MAHAL</text>
+ <path d="M58 113 H302" stroke="#eacb9b" stroke-width="1.3" opacity=".75"/>
+ <text x="58" y="143" font-family="Arial,Helvetica,sans-serif" font-size="13" letter-spacing="4.1">A CINEMATIC 3D EXPERIENCE</text>
+</g>
+<g fill="#f8dcc0" font-family="Arial,Helvetica,sans-serif" font-size="11" letter-spacing="2.1" opacity=".8">
+ <text x="57" y="475">AGRA  ·  INDIA</text>
+ <text x="1144" y="475" text-anchor="end">BUILT WITH THREE.JS</text>
+</g>
+<rect x="1" y="1" width="1198" height="498" rx="4" fill="none" stroke="#ffebd3" stroke-opacity=".16" stroke-width="2"/>
+</svg>
